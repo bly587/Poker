@@ -13,7 +13,22 @@ public class Card{
   */
   public Card(String value, String suit, int numericValue){
     this.value = value;
-    this.suit = suit;
+    if (suit.equals("h")){
+      this.suit = "♥";
+    }
+    else if (suit.equals("c")){
+      this.suit = "♣";
+    }
+    else if (suit.equals("d")){
+      this.suit = "♦";
+    }
+    else if (suit.equals("s")){
+      this.suit = "♠";
+    }
+    else
+    {
+      this.suit = suit;
+    }
     this.numericValue = numericValue;
   }
 
